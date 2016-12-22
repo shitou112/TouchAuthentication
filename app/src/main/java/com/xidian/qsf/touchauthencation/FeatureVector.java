@@ -7,6 +7,7 @@ import java.util.Arrays;
  * Created by Qian Shaofeng on 2016/11/13.
  */
 public class FeatureVector implements Serializable{
+
     protected double[] features;
     protected int classLabel;
 
