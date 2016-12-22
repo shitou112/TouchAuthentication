@@ -16,6 +16,7 @@ import java.util.List;
 
 /**
  * Created by Qian Shaofeng on 2016/11/13.
+ * TouchAuth这个类主要是将各个模块的内容整合形成一个整体
  */
 public class TouchAuth extends Thread{
     String TAG = "TouvhAuth";
