@@ -1,17 +1,3 @@
-/*
- *   This program is free software: you can redistribute it and/or modify
- *   it under the terms of the GNU General Public License as published by
- *   the Free Software Foundation, either version 3 of the License, or
- *   (at your option) any later version.
- *
- *   This program is distributed in the hope that it will be useful,
- *   but WITHOUT ANY WARRANTY; without even the implied warranty of
- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *   GNU General Public License for more details.
- *
- *   You should have received a copy of the GNU General Public License
- *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
 package com.xidian.qsf.touchauthencation.machinelearining;
 
 import com.xidian.qsf.touchauthencation.FeatureVector;
@@ -35,7 +21,7 @@ public class SVMClassifier extends Classifier {
 	/**
 	 * Learned SVM model
 	 */
-	public svm_model model; /*XXX*/ // = (svm_model)DataStorage.getModel(this);
+	public svm_model model; 
 	/**
 	 * Number of Features for the classifier
 	 */
@@ -44,12 +30,8 @@ public class SVMClassifier extends Classifier {
 	
 	static double minDistance=Double.MAX_VALUE;
 	List<FeatureVector> data1;
-	/**
-	 * A constructor that sets most parameter values of the classifier
-	 *  to their default value. Training samples to be provided separately
-	 * @param numFeatures Number of features 
-	 * @throws IllegalArgumentException
-	 */
+	
+	
 	public SVMClassifier(int numFeatures) 
 			throws IllegalArgumentException {
 		if (numFeatures < 1)
@@ -70,28 +52,19 @@ public class SVMClassifier extends Classifier {
 		);
 	}
 	
-	/**
-	 * 
-	 * @param probability SVM param -- see SVMlib doc for details
-	 * @param gamma SVM param -- see SVMlib doc for details
-	 * @param nu SVM param -- see SVMlib doc for details
-	 * @param C SVM param -- see SVMlib doc for details
-	 * @param svmType SVM param -- see SVMlib doc for details
-	 * @param kernelType SVM param -- see SVMlib doc for details
-	 * @param cacheSize SVM param -- see SVMlib doc for details
-	 * @param eps SVM param -- see SVMlib doc for details
-	 */
+	
+	
 	public void setSVMParameter(int probability, double gamma, 
 			double nu, double C, int svmType, int kernelType,
 			double cacheSize, double eps) {
 		this.parameter.probability = probability;
 		this.parameter.gamma = gamma;
-		this.parameter.nu = nu;//����v-SVC��һ��SVM��v- SVR�Ĳ���
-		this.parameter.C = C;//SVM��������
+		this.parameter.nu = nu;
+		this.parameter.C = C;
 		this.parameter.svm_type = svmType;
 		this.parameter.kernel_type = kernelType;       
 		this.parameter.cache_size = cacheSize;
-		this.parameter.eps = eps;   //�����������ֹ�о�(Ĭ��0.001)   
+		this.parameter.eps = eps;   
 	}
 	
 
@@ -143,7 +116,7 @@ public class SVMClassifier extends Classifier {
 			eucDistance = Math.sqrt(eucDistance);
 			
 			
-			//�ҵķ������
+			
 			double myDistance = 0;
 			for (int i = 0; i < numFeatures; i++){
 				if(i!=4&&i!=5){
