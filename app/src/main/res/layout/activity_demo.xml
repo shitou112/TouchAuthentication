@@ -1,35 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <TextView
             android:id="@+id/demo_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
+            android:textSize="12sp"
             android:text="当前收集用户触摸样例个数："/>
         <TextView
             android:id="@+id/positive_textview"
             android:layout_below="@id/demo_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
+            android:textSize="12sp"
             android:text="0"/>
 
-    <TextView
-        android:id="@+id/classifyscore_textview"
-        android:layout_below="@id/positive_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:text="当前得分：NULL"/>
+        <TextView
+            android:id="@+id/classifyscore_textview"
+            android:layout_below="@id/positive_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="当前得分：NULL"/>
+
+        <EditText
+            android:id="@+id/user_uid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="#00C5CD"
+            android:text="username"/>
+
+        <Button
+            android:id="@+id/delete_table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除数据库"
+            android:textSize="24sp"
+            android:onClick="onClick_Event"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/paintlayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"></LinearLayout>
+        android:orientation="vertical">
 
-</RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

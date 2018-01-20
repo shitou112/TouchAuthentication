@@ -1,4 +1,4 @@
-package com.xidian.qsf.touchauthencation.mydemo;
+package com.xidian.qsf.touchauthencation.activities;
 
 /**
  * Created by Qian Shaofeng on 2016/12/16.

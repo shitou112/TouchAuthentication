@@ -1,4 +1,4 @@
-package com.xidian.qsf.touchauthencation.acquiredata;
+package com.xidian.qsf.touchauthencation.secure;
 
 
 import com.xidian.qsf.touchauthencation.FeatureVector;

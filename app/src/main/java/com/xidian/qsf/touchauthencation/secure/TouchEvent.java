@@ -1,4 +1,4 @@
-package com.xidian.qsf.touchauthencation.acquiredata;
+package com.xidian.qsf.touchauthencation.secure;
 
 import com.xidian.qsf.touchauthencation.FeatureVector;
 import com.xidian.qsf.touchauthencation.utils.ArrayUtil;
@@ -21,31 +21,31 @@ public abstract class TouchEvent extends Generator{
     }
 
     public static final String featureList[] = {
-            "Start X",
-            "Start Y",
-            "End X",
-            "End Y",
-            "Duration in ms",
-            "Direct end-to-end distance",
-            "Mean Resultant Length",
-            "20% perc. pairwise velocity",
-            "50% perc. pairwise velocity",
-            "80% perc. pairwise velocity",
-            "20% perc. pairwise acceleration",
-            "50% perc. pairwise acceleration",
-            "80% perc. pairwise acceleration",
-            "Direction of End-to-End line",
-            "Length of Trajectory",
-            "Average Velocity",
-            "Pressure in the middle of stroke",
-            "Midstroke area covered",
-            "Phone Orientation",
-            "Direction Flag",
-            "Ratio of Direct Distance and Traj. Length",
-            "Largest Deviation from end-end Line (F22)",
-            "20% perc. Deviation from end-to-end line",
-            "50% perc. Deviation from end-to-end line",
-            "80% perc. Deviation from end-to-end line"
+            "Start X", // 0
+            "Start Y", // 1
+            "End X", // 2
+            "End Y", // 3
+            "Duration in ms", // 4
+            "Direct end-to-end distance", // 5
+            "Mean Resultant Length", // 6
+            "20% perc. pairwise velocity", // 7
+            "50% perc. pairwise velocity", // 8
+            "80% perc. pairwise velocity", // 9
+            "20% perc. pairwise acceleration", // 10
+            "50% perc. pairwise acceleration", // 11
+            "80% perc. pairwise acceleration", // 12
+            "Direction of End-to-End line", // 13
+            "Length of Trajectory", // 14
+            "Average Velocity", // 15
+            "Pressure in the middle of stroke", // 16
+            "Midstroke area covered", // 17
+            "Phone Orientation", // 18
+            "Direction Flag", // 19
+            "Ratio of Direct Distance and Traj. Length", // 20
+            "Largest Deviation from end-end Line (F22)", // 21
+            "20% perc. Deviation from end-to-end line", // 22
+            "50% perc. Deviation from end-to-end line", // 23
+            "80% perc. Deviation from end-to-end line" // 24
     };
 
     public static final int NUM_FEATURES = featureList.length;

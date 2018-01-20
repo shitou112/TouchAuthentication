@@ -35,7 +35,7 @@ public class SVMClassifier extends Classifier {
 	/**
 	 * Learned SVM model
 	 */
-	public svm_model model; /*XXX*/ // = (svm_model)DataStorage.getModel(this);
+	public svm_model model;
 	/**
 	 * Number of Features for the classifier
 	 */
@@ -44,12 +44,8 @@ public class SVMClassifier extends Classifier {
 	
 	static double minDistance=Double.MAX_VALUE;
 	List<FeatureVector> data1;
-	/**
-	 * A constructor that sets most parameter values of the classifier
-	 *  to their default value. Training samples to be provided separately
-	 * @param numFeatures Number of features 
-	 * @throws IllegalArgumentException
-	 */
+
+
 	public SVMClassifier(int numFeatures) 
 			throws IllegalArgumentException {
 		if (numFeatures < 1)
@@ -70,17 +66,7 @@ public class SVMClassifier extends Classifier {
 		);
 	}
 	
-	/**
-	 * 
-	 * @param probability SVM param -- see SVMlib doc for details
-	 * @param gamma SVM param -- see SVMlib doc for details
-	 * @param nu SVM param -- see SVMlib doc for details
-	 * @param C SVM param -- see SVMlib doc for details
-	 * @param svmType SVM param -- see SVMlib doc for details
-	 * @param kernelType SVM param -- see SVMlib doc for details
-	 * @param cacheSize SVM param -- see SVMlib doc for details
-	 * @param eps SVM param -- see SVMlib doc for details
-	 */
+
 	public void setSVMParameter(int probability, double gamma, 
 			double nu, double C, int svmType, int kernelType,
 			double cacheSize, double eps) {
@@ -124,9 +110,7 @@ public class SVMClassifier extends Classifier {
 	    if (this.model == null) 
 	    	throw new IllegalArgumentException("Malformed data. "
 	    			+ "Failed to train");
-	    //XXX
-	    //DataStorage.setModel(this, model);
-	    //svm.svm_save_model(model_file_name,model);
+
 
 	    return true;
 	}
@@ -143,7 +127,6 @@ public class SVMClassifier extends Classifier {
 			eucDistance = Math.sqrt(eucDistance);
 			
 			
-			//�ҵķ������
 			double myDistance = 0;
 			for (int i = 0; i < numFeatures; i++){
 				if(i!=4&&i!=5){

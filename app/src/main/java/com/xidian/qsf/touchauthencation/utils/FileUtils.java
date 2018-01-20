@@ -6,20 +6,15 @@ import android.util.Log;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import com.xidian.qsf.touchauthencation.FeatureVector;
-import com.xidian.qsf.touchauthencation.Parameters;
-import com.xidian.qsf.touchauthencation.acquiredata.Generator;
-import com.xidian.qsf.touchauthencation.acquiredata.TouchEvent;
+import com.xidian.qsf.touchauthencation.secure.TouchEvent;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import weka.classifiers.pmml.consumer.GeneralRegression;
 
 
 /**

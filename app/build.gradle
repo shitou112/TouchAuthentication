@@ -3,6 +3,9 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 23
     buildToolsVersion "25.0.0"
+    dexOptions {
+        jumboMode true
+    }
     defaultConfig {
         applicationId "com.xidian.qsf.touchauthencation"
         minSdkVersion 15
@@ -30,5 +33,5 @@ dependencies {
     compile files('libs/weka.jar')
     compile files('libs/libsvm.jar')
     compile 'org.jetbrains:annotations-java5:15.0'
-    compile 'org.jetbrains:annotations-java5:15.0'
+    debugCompile 'com.amitshekhar.android:debug-db:1.0.0'
 }
