@@ -97,9 +97,6 @@ public class SVMClassifier extends Classifier {
 	    if (this.model == null) 
 	    	throw new IllegalArgumentException("Malformed data. "
 	    			+ "Failed to train");
-	    //XXX
-	    //DataStorage.setModel(this, model);
-	    //svm.svm_save_model(model_file_name,model);
 
 	    return true;
 	}
